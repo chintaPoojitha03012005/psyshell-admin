@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #f9f9f9;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, rgb(166, 58, 80), rgb(219, 99, 121));
+    padding: 20px;
+    color: #fff;
+    box-shadow: 4px 0 12px rgba(166, 58, 80, 0.3);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar ul li.active,
+  .sidebar ul li:hover {
+    background-color: rgb(253, 217, 225);
+    color: rgb(166, 58, 80);
+    transform: scale(1.05);
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 300px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* Section Styles */
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 10px 15px;
+    background-color: rgb(166, 58, 80);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(219, 99, 121);
+  }
+  
+  /* Form Styles */
+  form {
+    margin-top: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Event and Member List */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Announcement Styles */
+  #announcementList div {
+    background-color: #fdf0f2;
+    border: 1px solid #f3d6d8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Logout */
+  #logout {
+    background-color: rgb(219, 99, 121);
+    color: white;
+  }
+  
+  #logout:hover {
+    background-color: rgb(166, 58, 80);
+    color: #fff;
+  }
+  
