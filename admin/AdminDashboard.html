@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsyShell Admin Panel</title>
+  <link rel="stylesheet" href="./styles/Dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      
+        <h2>PsyShell Admin</h2>
+        <ul>
+          <li class="active"><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li ><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+          <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+          <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+          <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+          <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+          <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+        </ul>
+      </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <h1>Dashboard Overview</h1>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <!-- Summary Cards -->
+      <div class="summary">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p id="totalUsers">Loading...</p>
+        </div>
+        <!-- <div class="card">
+          <h3>Active Listeners</h3>
+          <p id="activeListeners">Loading...</p>
+        </div> -->
+        <div class="card">
+          <h3>Ongoing Sessions</h3>
+          <p id="ongoingSessions">Loading...</p>
+        </div>
+      </div>
+
+      <!-- Metrics Section -->
+      <div class="metrics">
+        <div class="metric-card">
+          <h3>Avg Session Duration</h3>
+          <p id="avgDuration">0 min</p>
+        </div>
+        <div class="metric-card">
+          <h3>User Satisfaction</h3>
+          <p id="userSatisfaction">0%</p>
+        </div>
+      </div>
+
+      <!-- Live Activity Status -->
+      <div class="live-status">
+        <h3>Live Activity</h3>
+        <div class="status-card">
+          <p>Online Users: <span id="onlineUsers">0</span></p>
+          <p>Active Sessions: <span id="activeListeners">0</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/Dashboard.js"></script>
+</body>
+
+</html>

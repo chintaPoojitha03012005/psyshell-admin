@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsyShell - Settings & Customization</title>
+  <link rel="stylesheet" href="./styles/settings.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>PsyShell Admin</h2>
+      <ul>
+        <li><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+        <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+        <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+        <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+        <li class="active"><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1><i class="fas fa-cogs"></i> Settings & Customization</h1>
+      <div class="content-container">
+        <div class="card">
+          <h3>📜 Update Policies & Terms</h3>
+          <p>Review and update the policies, terms of service, and privacy settings. Ensure compliance with legal requirements.</p>
+          <button onclick="openModal('policyModal')">Update Policies</button>
+        </div>
+
+        <div class="card">
+          <h3>👤 Manage Admin Roles</h3>
+          <p>Assign, update, or remove roles such as super admin, moderators, and support staff.</p>
+          <button onclick="openModal('rolesModal')">Manage Roles</button>
+        </div>
+
+        <div class="card">
+          <h3>🔌 API Integrations</h3>
+          <p>Configure and manage API integrations to extend functionality. Ensure secure communication between services.</p>
+          <button onclick="openModal('apiModal')">Manage APIs</button>
+        </div>
+      </div>
+
+      <!-- Policy Modal -->
+      <div id="policyModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('policyModal')">&times;</span>
+          <h2>Update Policies & Terms</h2>
+          <textarea rows="8" placeholder="Edit policies and terms..."></textarea>
+          <button class="save-btn" onclick="saveChanges('Policies updated successfully!')">Save Changes</button>
+        </div>
+      </div>
+
+      <!-- Roles Modal -->
+      <div id="rolesModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('rolesModal')">&times;</span>
+          <h2>Manage Admin Roles</h2>
+          <select id="roleSelect">
+            <option value="super-admin">Super Admin</option>
+            <option value="moderator">Moderator</option>
+            <option value="support">Support Staff</option>
+          </select>
+          <button class="save-btn" onclick="saveChanges('Role updated successfully!')">Update Role</button>
+        </div>
+      </div>
+
+      <!-- API Modal -->
+      <div id="apiModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('apiModal')">&times;</span>
+          <h2>API Integrations</h2>
+          <input type="text" id="apiKey" placeholder="Enter API Key..." />
+          <button class="save-btn" onclick="saveChanges('API key updated successfully!')">Save API Key</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/settings.js"></script>
+</body>
+
+</html>

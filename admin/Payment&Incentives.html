@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsyShell - Payment & Incentives</title>
+  <link rel="stylesheet" href="./styles/Payment&Incentives.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>PsyShell Admin</h2>
+      <ul>
+        <li><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+        <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+        <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+        <li class="active"><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+        <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1><i class="fas fa-money-bill-wave"></i> Payment & Incentives</h1>
+      <div class="content-container">
+        <div class="card">
+          <h3>💸 Track Listener Earnings</h3>
+          <p>Monitor earnings and incentive payouts for active listeners. Keep track of successful sessions and rewards.</p>
+        </div>
+
+        <div class="card">
+          <h3>🪙 Manage Coins & Transactions</h3>
+          <p>View and manage all coin-related transactions by users. Ensure smooth transactions and avoid discrepancies.</p>
+        </div>
+
+        <div class="card">
+          <h3>💡 Subscription & Premium Features</h3>
+          <p>Control subscription plans and premium feature settings. Manage user access to exclusive content and services.</p>
+        </div>
+      </div>
+
+      <div class="payment-summary">
+        <h2>💰 Payment Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Listener Name</th>
+              <th>Earnings</th>
+              <th>Coins Earned</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="paymentData">
+            <!-- Payment rows will be injected here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/Payment&Incentives.js"></script>
+</body>
+
+</html>

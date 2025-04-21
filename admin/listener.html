@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Listener Management</title>
+  <link rel="stylesheet" href="./styles/listener.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <h2>PsyShell Admin</h2>
+        <ul>
+          <li><a href="./AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li ><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+          <li class="active"><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+          <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+          <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+          <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+          <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+          <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+        </ul>
+      </div>
+   
+    <div class="listener-list">
+        <h1>🎧 Active Listener Management</h1>
+        <div class="listener-actions">
+          <button id="addListenerBtn">➕ Add Listener</button>
+        </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <!-- <th>Experience Level</th> -->
+            <th>Status</th>
+            <th>Ratings</th>
+            <th>Hours</th>
+            <th>Complaints</th>
+            <!-- <th>Availability</th> -->
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="listenerTable">
+          <!-- Listener rows will be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal for adding/editing listeners -->
+  <div id="listenerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Add Listener</h2>
+      <form id="listenerForm">
+        <label>Name:</label>
+        <input type="text" id="name" required />
+        <label>Experience Level:</label>
+        <select id="experience" required>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Expert">Expert</option>
+        </select>
+        <label>Status:</label>
+        <select id="status">
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+        <label>Availability Time Slot:</label>
+        <input type="text" id="availability" placeholder="e.g., 10 AM - 6 PM" required />
+        <button type="submit" id="saveBtn">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./scripts/listener.js"></script>
+</body>
+
+</html>

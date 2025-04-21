@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsyShell - Notifications & Alerts</title>
+  <link rel="stylesheet" href="./styles/notifications.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>PsyShell Admin</h2>
+      <ul>
+        <li><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+        <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+        <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+        <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+        <li class="active"><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+        <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1><i class="fas fa-bell"></i> Notifications & Alerts</h1>
+      <div class="content-container">
+        <div class="card">
+          <h3>🚨 Automated Alerts</h3>
+          <p>Set up automated alerts for inactivity, complaints, or system issues. Ensure prompt response to system
+            anomalies.</p>
+        </div>
+
+        <div class="card">
+          <h3>📢 Announcements</h3>
+          <p>Send announcements to all users or specific groups. Keep your users informed about updates and important
+            information.</p>
+        </div>
+
+        <div class="card">
+          <h3>🔔 Notification History</h3>
+          <p>View the history of sent notifications. Monitor the status and ensure timely delivery of critical messages.</p>
+        </div>
+      </div>
+
+      <!-- Announcement Form -->
+      <div class="announcement-section">
+        <h2>📣 Send Announcement</h2>
+        <form id="announcementForm">
+          <label for="group">Select Group:</label>
+          <select id="group" name="group" required>
+            <option value="all">All Users</option>
+            <option value="listeners">Active Listeners</option>
+            <option value="premium">Premium Members</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type your announcement here..." required></textarea><br>
+
+          <button type="submit">Send Announcement</button>
+        </form>
+      </div>
+
+      <!-- Notification History -->
+      <div class="notification-summary">
+        <h2>📊 Notification History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Message</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="notificationData">
+            <!-- Notifications will be injected here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/notifications.js"></script>
+</body>
+
+</html>

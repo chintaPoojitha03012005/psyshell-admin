@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin & Organization Login</title>
+  <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+</head>
+<body>
+  <div class="logo">
+    <img src="ATMAN-removebg-preview.png" alt="Logo" />
+  </div>
+  <hr />
+  <div class="container">
+    <div class="login-box">
+      <!-- Role Selection -->
+      <div id="roleSelection">
+        <h2>Select Role</h2>
+        <button onclick="showLoginForm('admin')">Admin</button>
+        <button onclick="showLoginForm('organization')">Organization</button>
+      </div>
+
+      <!-- Hidden Login Form -->
+      <div id="loginSection" class="hidden">
+        <h2 id="roleTitle"></h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" name="password" required />
+              <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+          </div>
+
+          <button type="submit">Login</button>
+          <p id="errorMsg"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/login.js"></script>
+</body>
+</html>

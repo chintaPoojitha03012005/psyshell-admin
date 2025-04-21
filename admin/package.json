@@ -1,0 +1,20 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "admin": "file:",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "http": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.0",
+    "path": "^0.12.7"
+  }
+}

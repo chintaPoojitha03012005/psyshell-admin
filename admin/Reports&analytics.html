@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsyShell Admin - Reports & Analytics</title>
+  <link rel="stylesheet" href="./styles/Reports&analytics.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>PsyShell Admin</h2>
+      <ul>
+        <li><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+        <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+        <li class="active"><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+        <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+        <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1>📊 Reports & Analytics</h1>
+      <div class="analytics-container">
+        <div class="report-card">
+          <h3>Monthly/Weekly User Engagement</h3>
+          <canvas id="engagementChart"></canvas>
+        </div>
+
+        <div class="report-card heatmap-card">
+            <h3>🔥 Heatmap - Peak Hours</h3>
+            <div id="heatmap" class="heatmap"></div>
+          </div>
+
+        <div class="report-card">
+          <h3>✅ Session Completion & Drop-off</h3>
+          <canvas id="sessionChart"></canvas>
+        </div>
+
+        <div class="report-card">
+          <h3>💬 Feedback Analysis</h3>
+          <div id="feedbackAnalysis"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/Reports&analytics.js"></script>
+</body>
+
+</html>

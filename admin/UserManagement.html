@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management</title>
+  <link rel="stylesheet" href="./styles/UserManagement.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <h2>PsyShell Admin</h2>
+        <ul>
+          <li ><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li class="active"><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+          <li><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+          <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+          <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+          <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+          <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>User Management</h1>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <!-- User List -->
+      <div class="user-list">
+        <div class="card" id="userCardTemplate">
+          <h3 class="user-name">John Doe</h3>
+          <p class="user-email">johndoe@example.com</p>
+          <p class="user-mobile">Mobile: +91 9598684589</p>
+          <div class="actions">
+            <button class="btn ban-btn">Ban</button>
+            <button class="btn suspend-btn">Suspend</button>
+            <button class="btn warn-btn">Warn</button>
+          </div>
+          <button class="btn feedback-btn">View Feedback</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Modal -->
+  <div id="feedbackModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>User Feedback</h3>
+      <p id="feedbackText">No feedback available</p>
+    </div>
+  </div>
+
+  <script src="./scripts/UserManagement.js"></script>
+</body>
+</html>

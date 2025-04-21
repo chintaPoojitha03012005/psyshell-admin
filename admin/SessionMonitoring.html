@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/SessionMonitoring.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <title>Session Monitoring</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>PsyShell Admin</h2>
+        <ul>
+          <li ><a href="AdminDashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li ><a href="UserManagement.html"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="listener.html"><i class="fas fa-headset"></i> Active Listener</a></li>
+          <li class="active" ><a href="SessionMonitoring.html"><i class="fas fa-video"></i> Session Monitoring</a></li>
+          <li><a href="Reports&analytics.html"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+          <li><a href="Payment&Incentives.html"><i class="fas fa-money-bill-wave"></i> Payment & Incentives</a></li>
+          <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications & Alerts</a></li>
+          <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings & Customization</a></li>
+        </ul>
+      </div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Session Monitoring</h1>
+
+      <!-- Real-time Session Data -->
+      <div class="session-box">
+        <h3>Real-time Session Data</h3>
+        <div class="session-stats">
+          <div class="stat-card">
+            <h4>Active Calls</h4>
+            <p id="activeCalls">5</p>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- Session Logs -->
+      <div class="session-box">
+        <h3>Session Logs</h3>
+        <table id="sessionLogs">
+          <thead>
+            <tr>
+              <th>Session ID</th>
+              <th>User Name</th>
+              <th>Active Listener Name</th>
+              <th>Duration</th>
+              <th>Feedback</th>
+              <th>Flag Issue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Session data dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Flagged Issues -->
+      <div class="session-box">
+        <h3>Flagged Issues</h3>
+        <ul id="flaggedIssues">
+          <!-- Flagged issues dynamically added here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/SessionMonitoring.js"></script>
+</body>
+
+</html>
